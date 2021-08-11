@@ -59,11 +59,18 @@ int * play(int tab[3][3],int P) {
 	scanf("%d",&x);
 	printf("Enter the number of the column : ");
 	scanf("%d",&y);
+	
+	while(tab[x-1][y-1] != 0) {
+		
+		printf("You can't play in thah cellule.\n");
+		printf("Enter the number of the line : ");
+		scanf("%d",&x);
+		printf("Enter the number of the column : ");
+		scanf("%d",&y);
+		
+	}
 
-	if(P == 1)
-		tab[x-1][y-1] = P1;
-	else
-		tab[x-1][y-1] = P2;
+	tab[x-1][y-1] = P;
 
 	return tab;
 
